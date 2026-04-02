@@ -1,0 +1,32 @@
+server:
+  port: 8181
+
+topic:
+  name1: topic1
+  name2: topic2
+  name3: topic3
+  name4: topic4
+  name5: transactions
+  name6: alert
+
+
+spring:
+  kafka:
+    bootstrap-servers:
+      - localhost:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: consumer-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+
+
+
+
+
+
+
